@@ -1,6 +1,6 @@
 module "rgpd" {
   source = "../child_module/azurerm_resource_grp"
-  rg_name = "pdwala1-rg"
+  rg_name = "pdwala4-rg"
   }
 
   module "vnetpd" {
