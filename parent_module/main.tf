@@ -10,3 +10,11 @@ module "rgpd" {
     address_space = ["10.0.0.0/16"]
     rg_name      = module.rgpd.rg_name
   }
+
+  module "subnetpd" {
+    source = "../child_module/azurerm_subnet"
+    subnet_name = "subnetpdwala"
+    rg_name = module.rgpd.rg_name
+    vnet_name = "pdwala-vnet"
+    address_prefixes = ["10.0.0.0/16"]
+  }
